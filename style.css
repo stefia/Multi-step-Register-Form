@@ -9,13 +9,16 @@ body {
     font-family: "Inter", sans-serif;
     color: #E5E7EB;
     background-color: #121826;
+    background-image: url(resources/blur-radial.png);
+    background-position: 500px 100px;
+    background-repeat: no-repeat;
 }
 
 .container {
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
-    padding-top: 180px;
+    padding-top: 240px;
 }
 
 .text--heading {
