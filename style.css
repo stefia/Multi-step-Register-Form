@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Inter", sans-serif;
+    color: #E5E7EB;
+    background-color: #121826;
+}
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-top: 180px;
+}
+
+.text--heading {
+    font-size: 1.25rem;
+}
+.text--tab {
+    font-size: 0.875rem;
+}
+.text--body {
+    font-size: 1rem;
+    color: #A1A1A9;
+}
+.text--body-bd {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #E5E7EB;
+}
+.text--label {
+    font-size: 0.75rem;
+}
+
+.steps {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #212936;
+    border-radius: 10px;
+}
+.step__title {
+    margin-bottom: 40px;
+}
+.step.active { 
+    display: block; 
+}
+.step {
+    display: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.form__field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.form__input {
+    padding: 16px;
+    border-radius: 10px;
+    background-color: #394150;
+    border-style: none;
+}
+.form__input::placeholder {
+    color: #A1A1A9;
+}
+
+.submit {
+    margin: 0 auto;
+    padding: 12px 38px;
+    border-radius: 20px;
+    border-style: none;
+    text-align: center;
+    color: #E5E7EB;
+    cursor: pointer;
+    background: linear-gradient(180deg, #845eee 0%, #652cd1 100%);
+}
+
+.option {
+    display: block;
+    border: 1px solid #6c6c74;
+    border-radius: 10px;
+    padding: 15px;
+    cursor: pointer;
+    background-color: #4D5562;
+}
+
+.topic {
+    display: none;
+}
+.topic:checked + .option {
+    background: linear-gradient(to right, #6b46c1, #805ad5);
+}
+.topics li {
+    list-style-position: inside;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #4D5562; 
+    transition: background-color 0.3s ease;
+}
+.dot.active {
+    background-color: #845eee; 
+}
+
+.hidden {
+    display: none;
+}

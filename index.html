@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="FAQ Page">
+    <link rel="icon" href="resources/favicon.ico" type="image/x-icon" sizes="96x96"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Multi-step Register Form | devChallenges.io</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="steps">
+        <div id="step1" class="step active">
+          <p class="step__title text--heading">Register</p>
+          <form action="" onsubmit="handleStep1(event)">
+            <div class="form__field text--label">
+              <label for="name">Name</label>
+              <input id="name" class="form__input" type="text" required placeholder="Enter your name">
+            </div>
+            <div class="form__field text--label">
+              <label for="email">Email</label>
+              <input id="email" class="form__input" type="email" required placeholder="Example@gmail.com">
+            </div>
+            <button type="submit" class="submit">Continue</button>
+          </form>
+        </div>
+        <div id="step2" class="step">
+          <p class="step__title text--heading">Which topics you are interested in?</p>
+          <form action="" onsubmit="handleStep2(event)">
+            <div class="form__field text--label">
+              <input type="radio" id="dev" name="topic" value="Software Development" class="topic">
+              <label for="dev" class="option">Software Development</label>
+            </div>
+            <div class="form__field text--label">
+              <input type="radio" id="ux" name="topic" value="User Experience" class="topic">
+              <label for="ux" class="option">User Experience</label>
+            </div>
+            <div class="form__field text--label">
+              <input type="radio" id="design" name="topic" value="Graphic Design" class="topic">
+              <label for="design" class="option">Graphic Design</label>
+            </div>
+            <button type="submit" class="submit">Continue</button>
+          </form>
+        </div>
+        <div id="step3" class="step">
+          <p class="step__title text--heading">Summary</p>
+          <form action="" onsubmit="submitForm(event)">
+            <p class="text--body">Name: <span id="summaryName" class="text--body-bd"></span></p>
+            <p class="text--body">Email: <span id="summaryEmail" class="text--body-bd"></span></p>
+            <p class="text--body">Topics:</p>
+            <ul id="summaryTopics" class="topics text--body-bd"></ul>
+            <button type="submit" class="submit">Continue</button>
+          </form>
+        </div>
+        <div class="step" id="step4">
+          <h3 class="text--heading">✅ Submitted!</h3>
+          <p class="text--tab">Thank you for registering!</p>
+        </div>
+        <div class="dots" id="dots">
+          <span class="dot active" id="dot1"></span>
+          <span class="dot" id="dot2"></span>
+          <span class="dot" id="dot3"></span>
+        </div>    
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
